@@ -7,6 +7,8 @@ use Illuminate\Database\Seeder;
 
 class FakeSeeder extends Seeder
 {
+    const COUNT = 10;
+
     /**
      * Run the database seeds.
      *
@@ -15,7 +17,7 @@ class FakeSeeder extends Seeder
     public function run()
     {
         Movie::factory()
-            ->count(10)
+            ->count(self::COUNT)
             ->hasActors(3)
             ->create();
     }
